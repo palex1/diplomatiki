@@ -16,8 +16,8 @@ with col_title:
     st.title("🤖 AI Εκπαιδευτικός Σχεδιαστής")
     st.subheader("Διπλωματική Εργασία: Μετατροπή Ιδεών σε Ολοκληρωμένα Μαθήματα.")
 
-with col_logo:
-    st.image("https://upload.wikimedia.org/wikipedia/commons/0/07/Google_Gemini_logo.svg", width=100) # Λογότυπο Gemini
+#with col_logo:
+ #   st.image("https://upload.wikimedia.org/wikipedia/commons/0/07/Google_Gemini_logo.svg", width=100) # Λογότυπο Gemini
 
 st.markdown("---")
 
