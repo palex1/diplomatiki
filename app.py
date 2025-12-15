@@ -1,4 +1,10 @@
 import streamlit as st
+st.set_page_config(
+    page_title="AI Σχεδιαστής Εκπαιδευτικού Υλικού",
+    layout="wide",
+    # <-- ΠΡΟΣΘΗΚΗ THEME
+    initial_sidebar_state="expanded" 
+)
 from google import genai
 import os
 import time  # <--- ΤΟ ΠΡΟΣΘΕΣΑΜΕ ΓΙΑ ΝΑ ΚΑΝΟΥΜΕ ΠΑΥΣΕΙΣ
@@ -102,5 +108,6 @@ else:
     if not submit_btn:
 
         st.info("👈 Πατήστε 'Δημιουργία Υλικού' για να ξεκινήσετε.")
+
 
 
