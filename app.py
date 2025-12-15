@@ -9,7 +9,7 @@ import time  # <--- ΤΟ ΠΡΟΣΘΕΣΑΜΕ ΓΙΑ ΝΑ ΚΑΝΟΥΜΕ ΠΑΥ�
 st.set_page_config(page_title="AI Εκπαιδευτικός Σχεδιαστής", layout="wide")
 
 # --- ΣΗΜΕΙΟ ΠΡΟΣΟΧΗΣ: ΒΑΛΕ ΤΟ ΚΛΕΙΔΙ ΣΟΥ ΕΔΩ ---
-GEMINI_API_KEY = "AIzaSyBUPbDGp1BM0YMtfLaNkHTQ9RB9AGtvniM" 
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 # ------------------------------------------------
 
 if not GEMINI_API_KEY:
@@ -100,4 +100,5 @@ if submit_btn and client:
 
 else:
     if not submit_btn:
+
         st.info("👈 Πατήστε 'Δημιουργία Υλικού' για να ξεκινήσετε.")
