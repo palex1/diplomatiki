@@ -1,9 +1,8 @@
 import streamlit as st
-st.set_page_config(
-    page_title="AI Σχεδιαστής Εκπαιδευτικού Υλικού",
+    st.set_page_config(
+    page_title="Αρχική Σελίδα | AI Lesson Planner",
     layout="wide",
-    # <-- ΠΡΟΣΘΗΚΗ THEME
-    initial_sidebar_state="expanded" 
+    initial_sidebar_state="expanded"
 )
 
 
