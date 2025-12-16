@@ -1,61 +1,53 @@
 import streamlit as st
-# Custom CSS για πιο επαγγελματική εμφάνιση
 st.markdown(
     """
     <style>
-    /* 1. ΓΕΝΙΚΟ ΣΤΥΛ ΚΑΙ ΦΟΝΤΟ */
+    
+    /* 1. ΣΤΥΛ SIDEBAR (Πιο Σκούρο) */
+    [data-testid="stSidebar"] {
+        background-color: #2c3e50; /* Σκούρο γκρι/μπλε για το sidebar */
+        color: white; 
+    }
+    
+    /* 2. ΣΤΥΛ ΣΤΟΙΧΕΙΩΝ SIDEBAR */
+    [data-testid="stSidebar"] * {
+        color: white !important; /* Λευκό κείμενο/τίτλοι/κουμπιά στο sidebar */
+    }
+    
+    /* 3. ΦΟΝΤΟ ΚΥΡΙΟΥ ΣΩΜΑΤΟΣ */
     .stApp {
-        background-color: #f0f2f6; /* Πολύ ανοιχτό γκρι */
-        color: #1f2937; /* Σκούρο γκρι κείμενο */
-        font-family: 'Roboto', sans-serif; 
+        background-color: #f8f9fa; /* Πολύ ανοιχτό γκρι */
+        font-family: 'Roboto', sans-serif;
     }
 
-    /* 2. ΣΤΥΛ ΤΙΤΛΩΝ */
+    /* 4. ΣΤΥΛ ΤΙΤΛΩΝ */
     h1 {
-        color: #1f2937; 
-        font-size: 2.5rem;
-        border-bottom: 2px solid #007bff; /* Μπλε γραμμή κάτω από τον βασικό τίτλο */
-        padding-bottom: 10px;
+        color: #1a2a3a; 
+        font-size: 2.8rem; /* Μεγαλύτερος τίτλος */
+        border-bottom: 3px solid #007bff;
+        padding-bottom: 15px;
+        margin-top: 0;
     }
 
-    /* 3. ΣΤΥΛ ΚΟΥΜΠΙΟΥ */
-    /* Στοχεύουμε στο κουμπί 'Δημιουργία Υλικού' */
+    /* 5. ΣΤΥΛ ΚΟΥΜΠΙΟΥ */
     div.stButton > button:first-child {
-        background-color: #007bff; /* Έντονο Μπλε */
+        background-color: #007bff; 
         color: white;
         font-size: 1.1rem;
-        border-radius: 12px; /* Στρογγυλεμένες γωνίες */
+        border-radius: 12px;
         border: none;
-        padding: 10px 20px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Σκιά στο κουμπί */
         transition: all 0.3s ease;
     }
     
     div.stButton > button:first-child:hover {
-        background-color: #0056b3; /* Σκούρο μπλε στο hover */
-        transform: scale(1.05); /* Ελαφρύ ζουμ */
+        background-color: #0056b3; 
+        transform: translateY(-2px); /* Ελαφριά κίνηση προς τα πάνω */
     }
-
-    /* 4. ΣΤΥΛ ΠΛΑΙΣΙΩΝ (INFO BOXES) */
-    .stAlert {
-        border-radius: 12px;
-        border-left: 5px solid #007bff;
-    }
-
-    /* 5. ΣΤΥΛ TABS (ΚΑΡΤΕΛΕΣ) */
-    .stTabs [data-baseweb="tab-list"] {
-        gap: 24px;
-        border-bottom: 1px solid #ccc;
-    }
-    .stTabs [data-baseweb="tab"] {
-        height: 50px;
-        white-space: nowrap;
-        border-radius: 4px 4px 0 0;
-        font-size: 1.05rem;
-        color: #495057;
-    }
+    
+    /* 6. ΣΤΥΛ TABS */
     .stTabs [aria-selected="true"] {
-        background-color: #f0f2f6; 
-        color: #007bff; /* Μπλε επιλεγμένη καρτέλα */
+        color: #007bff; 
         border-bottom: 3px solid #007bff;
         font-weight: bold;
     }
